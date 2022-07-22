@@ -4,9 +4,7 @@
 
 **🉑️随意使用，无限制。**
 
-预览地址：[https://www.coolsong.tk](https://www.coolsong.tk)
-
-本项目（v3）基于[Mrxur](https://github.com/mrxur/home)开发
+本项目基于[Mrxur](https://github.com/mrxur/home)开发
 
 ## 更新日志
 - 修改：光标样式换成miku(22/1/25)
