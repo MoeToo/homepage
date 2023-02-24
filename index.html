@@ -1,346 +1,255 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>hoempage v3</title>
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="keywords" content="homepage, MoeToo">
+    <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/jquery.fancybox@2.1.5/source/jquery.fancybox.css">
+    <script type="text/javascript">
+        if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+            alert('朋友，上古浏览器不支持呢~');
+        }
+    </script>
+</head>
+<body>
+    <div id="overlay">
+        <div id="text">
+            <h1 style="color: #eee;">加载中</h1>
+            <p>萌也·MoeToo</p>
+        </div>
+    </div>
+    <div id="web-content" style="display:none;">
+        <div class="cover">
+            <div class="div_title">
+                <div class="title">
+                    <span id="title"/>
+                </div>
+                <a id="down" href="#main">&#8595;</a>
+            </div>
+        </div>
+        <main class="content" id="main">
+            <div class="layout_page" id="content-inner">
+                <div class="aside_content" id="aside_content">
+                    <div class="card-widget card-info blur">
+                        <div class="card-content">
+                            <div class="card-info-avatar is-center">
+    
+                                <img class="avatar-img"
+                                    src="/static/source/color.png"
+                                    alt="头像" id="avatar">
+    
+                                <div class="author-info__name">萌也·MoeToo</div>
+                                <div class="author-info__description">子曰：善哉，萌也~</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card-widget card-announcement blur">
+                        <div class="card-content" id="yiyan">
+                            <div class="item-headline">
+                                <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                                <span>一言</span>
+                            </div>
+                            <div id="hitokoto">获取中...</div>
+                        </div>
+                    </div>
+                    <div class="card-widget card-announcement poem blur">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <span>诗词</span>
+                            </div>
+                            <div id="jinrishici-sentence">获取中...</div>
+                        </div>
+                    </div>
+    
+                    <div class="card-widget card-webinfo blur">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                <span>站点信息</span>
+                            </div>
+                            <div class="webinfo">
+                                <div class="webinfo-item">
+                                    <div class="webinfo-site-uv-name">本站访客数 :</div>
+                                    <div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div>
+                                </div>
+                                <div class="webinfo-item">
+                                    <div class="webinfo-site-name">本站总访问量 :</div>
+                                    <div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <article id="page" class="blur">
+                    <div class="article-container">
+                        <div id="music">
+                            <h2>音乐</h2>
+                            <meting-js auto="https://music.163.com/song?id=1413374282">
+                            </meting-js>
+                        </div>
+                        <hr>
+    
+                        <h2>技能</h2>
+                        <div class="skillbox">
+                            <div class="skillbar">
+                                <div class="skillbar-title"
+                                    style="background: linear-gradient(to right, #9900FF 0%, #CC66FF 100%); width: 20%">
+                                    <span>html</span>
+                                </div>
+                                <div class="skill-bar-percent">20%</div>
+                            </div>
+                            <div class="skillbar">
+                                <div class="skillbar-title"
+                                    style="background: linear-gradient(to right, #00ff5d 0%, #66ff00 100%); width: 35%">
+                                    <span>Python</span>
+                                </div>
+                                <div class="skill-bar-percent">35%</div>
+                            </div>
+                            <div class="skillbar">
+                                <div class="skillbar-title"
+                                    style="background: linear-gradient(to right, #ff55ff 0%, #ff267d 100%); width: 15%">
+                                    <span>Unity</span>
+                                </div>
+                                <div class="skill-bar-percent">15%</div>
+                            </div>
+                            <div class="skillbar">
+                                <div class="skillbar-title"
+                                    style="background: linear-gradient(to right, #55ff00 0%, #ffff00 100%); width: 60%">
+                                    <span>PS</span>
+                                </div>
+                                <div class="skill-bar-percent">60%</div>
+                            </div>
+                            <div class="skillbar">
+                                <div class="skillbar-title"
+                                    style="background: linear-gradient(to right, #aa55ff 0%, #0055ff 100%); width: 60%">
+                                    <span>PR</span>
+                                </div>
+                                <div class="skill-bar-percent">60%</div>
+                            </div>
+                        </div>
+    
+                        <hr>
+                        <h2>小玩意</h2>
+                        <div class="tool">
+                            <a href="https://github.com/Coolsong-max/txclass_helper" target="_blank" class="btn"
+                                style="background: #02ff6b;">疼讯课堂小助手</a>
+                            <a href="https://mp.weixin.qq.com/s/5x-wa9JkjFlLN1EdrTIn2w" target="_blank" class="btn"
+                                style="background: #1E2E5D;">云音乐升级助手</a>
+                            <a href="https://github.com/Coolsong-max/Coolsong-max.github.io" target="_blank"
+                                class="btn" style="background: #00aaff;">本站源码</a>
+                        </div>
+    
+                        <hr>
+                        <div class="copyright">&copy;2020 - 2023 Made with ❤️ By MoeToo</div>
+                        <div id="runtime_span"></div>
+                        <a href="https://icp.gov.moe/?keyword=20220914" target="_blank" id="beian">萌ICP备20220914号</a>
+                    </div>
+                </article>
+        </main>
+        <!-- <footer id="footer" class="blur">
+            <div id="footer-wrap">
+                <div class="copyright">&copy;2020 - 2023 Made with ❤️ By MoeToo</div>
+                <div id="runtime_span"></div>
+                <a href="https://icp.gov.moe/?keyword=20220914" target="_blank" id="beian">萌ICP备20220914号</a>
+            </div>
+        </footer> -->
+    </div>
+</body>
+<script src="https://gcore.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script>
+    var hitokoto = '1'
+    var typed = new Typed("#title", {
+        strings: ["子曰：善哉，萌也~", "萌也", "MoeToo"],
+        startDelay: 300,
+        typeSpeed: 100,
+        loop: true,
+        backSpeed: 50,
+        showCursor: true
+    });
+</script>
+<script>
+    // 获取遮罩层和内容区域的元素
+    const overlay = document.getElementById('overlay');
+    const content = document.getElementById('web-content');
 
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
-		<title>Coolsong | TECH OTAKUS SAVE THE WORLD</title>
-		<meta name="description" content="坐标深圳，略懂前端，二次元，学生，擅长摆烂">
-		<meta name="keywords" content="html, css, 前端, coolsong, 个人主页">
-		<meta name="format-detection" content="telephone=no">
-		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/Coolsong-max/cdn@master/css/home_page/index.css">
-		<link rel="stylesheet" href="./static/css/index.css">
-		<link rel="stylesheet" href="https://at.alicdn.com/t/font_3173555_ede3o4iy55k.css">
-		<link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/jquery.fancybox@2.1.5/source/jquery.fancybox.css">
+    // 在页面加载完成后执行以下代码
+    window.onload = function() {
+        // 遮罩层渐变消失的动画效果
+        overlay.style.transition = 'opacity 1s';
+        overlay.style.display = 'none';
 
-
-		<script type="text/javascript">
-			if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
-				alert('朋友，上古浏览器不支持呢~');
-			}
-		</script>
-	</head>
-
-	<body>
-		<!-- 下雪效果 -->
-		<div class="snow-container">
-			<div class="snow foreground"></div>
-			<div class="snow foreground layered"></div>
-			<div class="snow middleground"></div>
-			<div class="snow middleground layered"></div>
-			<div class="snow background"></div>
-			<div class="snow background layered"></div>
-		</div>
-		
-		<div id="body-wrap">
-			<nav class="not_index_bg" id="nav">
-				<div id="page_site-info">
-					<div id="site-title">
-						<span class="blogtitle"></span>
-						<script src="https://gcore.jsdelivr.net/npm/typed.js@2.0.11"></script>
-						<script>
-							var typed = new Typed(".blogtitle", {
-								strings: ["TECH OTAKUS SAVE THE WORLD", "技術宅拯救世界", "技術的なオタクは世界を救う"],
-								startDelay: 300,
-								typeSpeed: 100,
-								loop: true,
-								backSpeed: 50,
-								showCursor: true
-							});
-						</script>
-					</div>
-				</div>
-			</nav>
-			<main id="content-outer">
-				<div class="layout_page" id="content-inner">
-					<div class="aside_content" id="aside_content">
-						<div class="card-widget card-info">
-							<div class="card-content">
-								<div class="card-info-avatar is-center">
-
-									<img class="avatar-img"
-										src="https://gcore.jsdelivr.net/gh/Coolsong-max/cdn@master/img/avatar/grey.png"
-										alt="头像" id="avatar">
-
-									<div class="author-info__name">Coolsong</div>
-									<div class="author-info__description">坐标深圳，略懂前端，二次元，学生，<s><b>擅长摆烂</b></s></div>
-								</div>
-								<div class="card-info-social-icons is-center links-of-author">
-									<a class="social-icon" href="https://github.com/Coolsong-max" target="_blank"
-										id="github" style="color:#6e5494" title="GitHub@Coolsong-max">
-										<i class="iconfont icon-github"></i>
-									</a>
-									<a class="social-icon" id="qq"
-										href="http://sighttp.qq.com/authd?IDKEY=db8dfbb5b086dc5c258739e2503a2da229318a2033ab718b"
-										style="color:#12B7F5" title="QQ@2948959108">
-										<i class="iconfont icon-qq"></i>
-									</a>
-									<a class="social-icon" id="email" href="mailto:Coolsong@moe2.tk"
-										style="color:#8E71C1" title="E-Mail">
-										<i class="iconfont icon-email"></i>
-									</a>
-									<a class="social-icon" id="twitter" href="https://twitter.com/Coolsong_"
-										style="color:#1da1f2" title="Twitter@Coolsong_">
-										<i class="iconfont icon-twitter-line"></i>
-									</a>
-									<a class="social-icon" id="telegram" href="https://t.me/C00LS0NG"
-										style="color:#0088CC" title="Telegram@C00lS0NG">
-										<i class="icon-size iconfont icon-telegram"></i></a>
-									</a>
-									<a class="social-icon" id="cloud_music"
-										href="https://music.163.com/#/user/home?id=1357633095" style="color:#e92300"
-										title="网易云音乐@Coolsong2018">
-										<i class="icon-size iconfont icon-netease-cloud-music-line"></i></a>
-									</a>
-									<a class="social-icon" id="bilibili" href="https://space.bilibili.com/69205017"
-										style="color:#00a0d8" title="Bilibili@Coolsong2016">
-										<i class="icon-size iconfont icon-bilibili-line"></i></a>
-									</a>
-
-								</div>
-							</div>
-						</div>
-
-						<div class="card-widget card-announcement">
-							<div class="card-content" id="yiyan">
-								<div class="item-headline">
-									<i class="fa fa-bullhorn" aria-hidden="true"></i>
-									<span>一言</span>
-								</div>
-								<div id="hitokoto"></div>
-							</div>
-						</div>
-						<div class="card-widget card-announcement poem">
-							<div class="card-content">
-								<div class="item-headline">
-									<i class="fa fa-calendar" aria-hidden="true"></i>
-									<span>诗词</span>
-								</div>
-								<div id="jinrishici-sentence"></div>
-							</div>
-						</div>
-
-						<div class="card-widget card-webinfo">
-							<div class="card-content">
-								<div class="item-headline">
-									<i class="fa fa-line-chart" aria-hidden="true"></i>
-									<span>站点信息</span>
-								</div>
-								<div class="webinfo">
-									<div class="webinfo-item">
-										<div class="webinfo-site-uv-name">本站访客数 :</div>
-										<div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div>
-									</div>
-									<div class="webinfo-item">
-										<div class="webinfo-site-name">本站总访问量 :</div>
-										<div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<article id="page">
-						<div class="article-container">
-							<div id="music">
-								<h2>音乐</h2>
-								<meting-js auto="https://y.music.163.com/m/playlist?id=5322201821">
-								</meting-js>
-							</div>
-							<hr>
-
-							<h2>技能</h2>
-							<div class="skillbox">
-								<div class="skillbar">
-									<div class="skillbar-title"
-										style="background: linear-gradient(to right, #9900FF 0%, #CC66FF 100%); width: 20%">
-										<span>html</span>
-									</div>
-									<div class="skill-bar-percent">20%</div>
-								</div>
-								<div class="skillbar">
-									<div class="skillbar-title"
-										style="background: linear-gradient(to right, #00ff5d 0%, #66ff00 100%); width: 35%">
-										<span>Python</span>
-									</div>
-									<div class="skill-bar-percent">35%</div>
-								</div>
-								<div class="skillbar">
-									<div class="skillbar-title"
-										style="background: linear-gradient(to right, #ff55ff 0%, #ff267d 100%); width: 15%">
-										<span>Unity</span>
-									</div>
-									<div class="skill-bar-percent">15%</div>
-								</div>
-								<div class="skillbar">
-									<div class="skillbar-title"
-										style="background: linear-gradient(to right, #55ff00 0%, #ffff00 100%); width: 60%">
-										<span>PS</span>
-									</div>
-									<div class="skill-bar-percent">60%</div>
-								</div>
-								<div class="skillbar">
-									<div class="skillbar-title"
-										style="background: linear-gradient(to right, #aa55ff 0%, #0055ff 100%); width: 60%">
-										<span>PR</span>
-									</div>
-									<div class="skill-bar-percent">60%</div>
-								</div>
-							</div>
-
-							<hr>
-							<h2>小玩意</h2>
-							<div class="tool">
-								<a href="https://github.com/Coolsong-max/txclass_helper" target="_blank" class="btn"
-									style="background: #02ff6b;">疼讯课堂小助手</a>
-								<a href="https://mp.weixin.qq.com/s/5x-wa9JkjFlLN1EdrTIn2w" target="_blank" class="btn"
-									style="background: #1E2E5D;">云音乐升级助手</a>
-								<a href="https://github.com/Coolsong-max/Coolsong-max.github.io" target="_blank"
-									class="btn" style="background: #00aaff;">本站源码</a>
-							</div>
-
-							<hr>
-							<h2>赏杯咖啡</h2>
-
-							<div id="donate">
-								<!-- 打赏按钮开始 -->
-								<div id="pending">
-									<p id="depends">
-										<a href="#showqrcode_wx" class="btn btn-primary" id="wechatpay">
-											<i class="iconfont icon-wechat-pay-line"></i>
-											微信支付
-										</a>
-										<a href="#showqrcode_ali" class="btn btn-primary" id="alipay">
-											<i class="iconfont icon-alipay"></i>
-											支付宝
-										</a>
-										<a href="#showqrcode_ermb" class="btn btn-primary" id="ermb">
-											<i class="iconfont icon-shuzirenminbi"></i>
-											数字人民币
-										</a>
-									</p>
-								</div>
-								<!-- 打赏按钮结束 -->
-
-								<!-- 打赏弹框开始 -->
-								<div class="modal" id="showqrcode_wx">
-									<div class="modal-container" role="document">
-										<div class="modal-header">
-											<a href="#donate" class="btn btn-clear float-right" aria-label="Close"></a>
-											<div style="text-align: center">用爱发电 感谢支持！</div>
-										</div>
-										<div class="modal-body">
-											<img src="https://s1.328888.xyz/2022/02/10/GyfaB.png" alt="wechatpay" class="qrcode" />
-										</div>
-									</div>
-								</div>
-								<div class="modal" id="showqrcode_ali">
-									<div class="modal-container" role="document">
-										<div class="modal-header">
-											<a href="#donate" class="btn btn-clear float-right" aria-label="Close"></a>
-											<div style="text-align: center">用爱发电 感谢支持！</div>
-										</div>
-										<div class="modal-body">
-											<img src="https://s1.328888.xyz/2022/02/10/GyX54.png" alt="alipay" class="qrcode" />
-										</div>
-									</div>
-								</div>
-								<div class="modal" id="showqrcode_ermb">
-									<div class="modal-container" role="document">
-										<div class="modal-header">
-											<a href="#donate" class="btn btn-clear float-right" aria-label="Close"></a>
-											<div style="text-align: center">用爱发电 感谢支持！</div>
-										</div>
-										<div class="modal-body">
-											<img src="https://s1.328888.xyz/2022/02/10/Gy2H2.png" alt="ermb" class="qrcode" />
-										</div>
-									</div>
-								</div>
-								<!-- 打赏弹框结束 -->
-							</div>
+        // 显示内容区域的动画效果
+        content.style.display = 'initial';
+        content.style.animation = 'fadein 1s';
+    }
 
 
-						</div>
-					</article>
-				</div>
+</script>
+<script src="https://gcore.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js">
+</script>
+<script src="https://gcore.jsdelivr.net/npm/jquery.fancybox@2.1.5/source/jquery.fancybox.js"></script>
+<!-- 访问统计 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-			</main>
-			<footer id="footer">
-				<div id="footer-wrap">
-					<div class="copyright">&copy;2019 - 2022 Made with ❤️ By Coolsong</div>
-					<div id="runtime_span"></div>
-					<a href="https://icp.gov.moe/?keyword=20220914" target="_blank" id="beian">萌ICP备20220914号</a>
-				</div>
-			</footer>
-		</div>
-		<script src="https://gcore.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js">
-		</script>
-		<script src="https://gcore.jsdelivr.net/npm/jquery.fancybox@2.1.5/source/jquery.fancybox.js"></script>
-		<!-- 访问统计 -->
-		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/instant.page@3.0.0/instantpage.js" type="module"></script>
+<script src="https://gcore.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js" async></script>
+<!-- aplayer、meting -->
+<!-- require APlayer -->
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://gcore.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://gcore.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
-		<script src="https://gcore.jsdelivr.net/npm/instant.page@3.0.0/instantpage.js" type="module"></script>
-		<script src="https://gcore.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js" async></script>
-		<!-- aplayer、meting -->
-		<!-- require APlayer -->
-		<link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-		<script src="https://gcore.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-		<!-- require MetingJS -->
-		<script src="https://gcore.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<!-- nplayer -->
+<script src="https://unpkg.com/nplayer@latest/dist/index.min.js"></script>
 
-		<!-- nplayer -->
-		<script src="https://unpkg.com/nplayer@latest/dist/index.min.js"></script>
+<!--   一言、今日诗词   -->
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
-		<!--   一言、今日诗词   -->
-		<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
-		<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<!--鼠标点击效果-->
+<script src="https://gcore.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/maodian.js"></script>
 
-		<!-- 看板娘 -->
-		<link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-		<script src="https://gcore.jsdelivr.net/gh/Coolsong-max/live2d-widget@master/autoload.js"></script>
+<script type="text/javascript">
+    // 标题
+    var OriginTitle = document.title;
+    var titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            // $('[rel="icon"]').attr('href', "/funny.ico");
+            document.title = '╭(°A°`)╮ 页面崩溃啦 ~';
+            clearTimeout(titleTime);
+        } else {
+            $('[rel="icon"]').attr('href', "/favicon.ico");
+            document.title = '(ฅ>ω<*ฅ) 噫又好啦 ~' + OriginTitle;
+            titleTime = setTimeout(function() {
+                document.title = OriginTitle;
+            }, 2000);
+        }
+    });
 
-		<!--鼠标点击效果-->
-		<script src="https://gcore.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/maodian.js"></script>
-
-		<script type="text/javascript">
-			// 浏览器恶搞标题
-			var OriginTitle = document.title;
-			var titleTime;
-			document.addEventListener('visibilitychange', function() {
-				if (document.hidden) {
-					// $('[rel="icon"]').attr('href', "/funny.ico");
-					document.title = '╭(°A°`)╮ 页面崩溃啦 ~';
-					clearTimeout(titleTime);
-				} else {
-					$('[rel="icon"]').attr('href', "/favicon.ico");
-					document.title = '(ฅ>ω<*ฅ) 噫又好啦 ~' + OriginTitle;
-					titleTime = setTimeout(function() {
-						document.title = OriginTitle;
-					}, 2000);
-				}
-			});
-
-			// 运行时间统计
-			function show_runtime() {
-				window.setTimeout("show_runtime()", 1000);
-				X = new
-				Date("09/21/2021 15:10:00");
-				Y = new Date();
-				T = (Y.getTime() - X.getTime());
-				M = 24 * 60 * 60 * 1000;
-				a = T / M;
-				A = Math.floor(a);
-				b = (a - A) * 24;
-				B = Math.floor(b);
-				c = (b - B) * 60;
-				C = Math.floor((b - B) * 60);
-				D = Math.floor((c - C) * 60);
-				runtime_span.innerHTML = "已在二次元中度过了" + A + "天" + B + "小时" + C + "分" + D + "秒"
-			}
-			show_runtime();
-		</script>
-	</body>
-
+    // 运行时间统计
+    function show_runtime() {
+        window.setTimeout("show_runtime()", 1000);
+        X = new
+        Date("06/27/2020 7:23:00");
+        Y = new Date();
+        T = (Y.getTime() - X.getTime());
+        M = 24 * 60 * 60 * 1000;
+        a = T / M;
+        A = Math.floor(a);
+        b = (a - A) * 24;
+        B = Math.floor(b);
+        c = (b - B) * 60;
+        C = Math.floor((b - B) * 60);
+        D = Math.floor((c - C) * 60);
+        runtime_span.innerHTML = "已在二次元中度过了" + A + "天" + B + "小时" + C + "分" + D + "秒"
+    }
+    show_runtime();
+</script>
 </html>
