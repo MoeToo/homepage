@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>hoempage v3</title>
+	<title>萌也·MoeToo</title>
     <link rel="stylesheet" href="./static/css/index.css">
     <link rel="shortcut icon" href="favicon.ico">
     <meta name="keywords" content="homepage, MoeToo">
@@ -17,11 +17,19 @@
 <body>
     <div id="overlay">
         <div id="text">
-            <h1 style="color: #eee;">加载中</h1>
+            <h1 style="color: #eee;">Loading...</h1>
             <p>萌也·MoeToo</p>
         </div>
     </div>
     <div id="web-content" style="display:none;">
+        <div class="snow-container">
+			<div class="snow foreground"></div>
+			<div class="snow foreground layered"></div>
+			<div class="snow middleground"></div>
+			<div class="snow middleground layered"></div>
+			<div class="snow background"></div>
+			<div class="snow background layered"></div>
+		</div>
         <div class="cover">
             <div class="div_title">
                 <div class="title">
@@ -180,15 +188,13 @@
     // 在页面加载完成后执行以下代码
     window.onload = function() {
         // 遮罩层渐变消失的动画效果
-        overlay.style.transition = 'opacity 1s';
+        overlay.style.transition = 'opacity';
         overlay.style.display = 'none';
 
         // 显示内容区域的动画效果
         content.style.display = 'initial';
-        content.style.animation = 'fadein 1s';
+        content.style.animation = 'fadein';
     }
-
-
 </script>
 <script src="https://gcore.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js">
 </script>
