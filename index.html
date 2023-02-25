@@ -187,13 +187,13 @@
 
     // 在页面加载完成后执行以下代码
     window.onload = function() {
-        // 遮罩层渐变消失的动画效果
-        overlay.style.transition = 'opacity';
-        overlay.style.display = 'none';
-
-        // 显示内容区域的动画效果
         content.style.display = 'initial';
         content.style.animation = 'fadein';
+        // 遮罩层渐变消失的动画效果
+        setTimeout(function() {
+        overlay.style.transition = 'opacity';
+            overlay.style.display = 'none';
+        }, 1000);
     }
 </script>
 <script src="https://gcore.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js">
