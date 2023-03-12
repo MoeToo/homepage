@@ -15,7 +15,7 @@
     </script>
 </head>
 <body>
-    <div id="overlay">
+    <div id="overlay" class="blur">
         <div id="text">
             <h1 style="color: #eee;">Loading...</h1>
             <p>萌也·MoeToo</p>
@@ -181,20 +181,15 @@
     });
 </script>
 <script>
-    // 获取遮罩层和内容区域的元素
     const overlay = document.getElementById('overlay');
     const content = document.getElementById('web-content');
 
-    // 在页面加载完成后执行以下代码
-    window.onload = function() {
-        content.style.display = 'initial';
-        content.style.animation = 'fadein';
-        // 遮罩层渐变消失的动画效果
-        setTimeout(function() {
-        overlay.style.transition = 'opacity';
-            overlay.style.display = 'none';
-        }, 1000);
-    }
+    window.addEventListener('load', function() {
+			document.getElementById('overlay').classList.add('hide');
+        });
+    // 显示内容区域
+    content.style.display = 'initial';
+    content.style.animation = 'fadein 0.s';
 </script>
 <script src="https://gcore.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js">
 </script>
@@ -211,18 +206,14 @@
 <!-- require MetingJS -->
 <script src="https://gcore.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
-<!-- nplayer -->
 <script src="https://unpkg.com/nplayer@latest/dist/index.min.js"></script>
 
-<!--   一言、今日诗词   -->
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
-<!--鼠标点击效果-->
 <script src="https://gcore.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/maodian.js"></script>
 
 <script type="text/javascript">
-    // 标题
     var OriginTitle = document.title;
     var titleTime;
     document.addEventListener('visibilitychange', function() {
@@ -239,7 +230,6 @@
         }
     });
 
-    // 运行时间统计
     function show_runtime() {
         window.setTimeout("show_runtime()", 1000);
         X = new
